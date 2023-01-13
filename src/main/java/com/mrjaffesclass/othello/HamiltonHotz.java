@@ -1,32 +1,39 @@
 package com.mrjaffesclass.othello;
 
 import java.util.ArrayList;
-import java.util.Timer;
-
 
 /**
- * The type Hamilton hotz.
+ * Othello class project competition player HamiltonHotz to rule the world!
  */
 public class HamiltonHotz extends Player {
 
-    private final int DEPTH = 6;
+
+    private final int DEPTH = 8;
+
     /**
      * Instantiates a new Hamilton hotz.
      *
-     * @param color the color
+     * @param color the color of the player (Constants.BLACK or Constants.WHITE)
      */
     public HamiltonHotz(int color) {
         super(color);
     }
 
-    // add the list of available moves of the current board to the list of moves
+    /**
+     * Get an array of the possible moves for a player
+     * @param currentBoard the current board state
+     * @param player the player to find moves for
+     * @return the int [ ] of possible moves
+     */
     private ArrayList<Position> getAllPossibleMoves(Board currentBoard, Player player) {
         ArrayList<Position> moves = new ArrayList<>();
-        for(int row = 0; row < Constants.SIZE; row++) {
 
-            for(int col = 0; col < Constants.SIZE; col++) {
-
-                if (currentBoard.isLegalMove(this, new Position(row, col))) {
+        for (int row = 0; row < Constants.SIZE; row++)
+        {
+            for (int col = 0; col < Constants.SIZE; col++)
+            {
+                if (currentBoard.isLegalMove(this, new Position(row, col)))
+                {
                     moves.add(new Position(row, col));
                 }
 
@@ -35,26 +42,34 @@ public class HamiltonHotz extends Player {
         return moves;
     }
 
+    /**
+     * Override the getMove method to return a move determined by the minimax algorithm
+     * @param board Game board
+     * @return Move to make
+     */
     @Override
     public Position getNextMove(Board board) {
-        // Create a timer to record how long the algorithm takes to run
-        Timer timer = new Timer();
-        timer.run();
-        Position bestMove =  getBestMove(board, this, DEPTH);
-        timer.stop();
-        System.out.println("Time: " + timer.getElapsedTime() + " ms");
-        return bestMove;
+        return getBestMove(board, this, DEPTH);
     }
 
-    //Get the score of the current board
+    /**
+     * Get the current score of the board
+     * @param currentBoard the current board state
+     * @param player the player to get the score for
+     * @return the board score
+     */
     private int getScore(Board currentBoard, Player player) {
-        int score = 0;
-
-        score += currentBoard.countSquares(player.getColor());
-
-        return score;
+        return currentBoard.countSquares(player.getColor());
     }
 
+    /**
+     * Get the board after a move has been made
+     *
+     * @param oldBoard the current board state
+     * @param move     the move to make
+     * @param player   the player making the move
+     * @return the new board
+     */
     public Board getNewBoardAfterMove(Board oldBoard, Position move, Player player) {
 
         Board newBoard = new Board();
@@ -64,17 +79,33 @@ public class HamiltonHotz extends Player {
         return newBoard;
     }
 
+    /**
+     * Copy the contents of one board to another board
+     * @param oldBoard the board to copy from
+     * @param newBoard the board to copy to
+     * Cannot @return the new board because it is passed by reference
+     */
     private void copyBoard(Board oldBoard, Board newBoard) {
-        for(int row = 0; row < Constants.SIZE; row++) {
-            for (int col = 0; col < Constants.SIZE; col++) {
+        for (int row = 0; row < Constants.SIZE; row++)
+        {
+            for (int col = 0; col < Constants.SIZE; col++)
+            {
                 Position pos = new Position(row, col);
                 Player status = new Player(oldBoard.getSquare(pos).getStatus());
-
                 newBoard.setSquare(status, pos);
+
             }
         }
     }
 
+    /**
+     * Get the best move for the current player
+     *
+     * @param currentBoard the current board state
+     * @param player       the current player making the move
+     * @param depth        the depth of the search tree
+     * @return the best move
+     */
     public Position getBestMove(Board currentBoard, Player player,int depth){
         int bestScore = Integer.MIN_VALUE;
         Position bestMove = null;
@@ -90,6 +121,17 @@ public class HamiltonHotz extends Player {
         }
         return bestMove;
     }
+
+    /**
+     * Minimax with alpha beta pruning
+     * @param currentBoard the current board state
+     * @param player the player who is making the move
+     * @param depth the depth of the tree
+     * @param isMax if the player is maximizing
+     * @param alpha the alpha value for alpha beta pruning
+     * @param beta the beta value for alpha beta pruning
+     * @return the score of the current board as an int
+     */
     private int MMAB(Board currentBoard,Player player,int depth,boolean isMax,int alpha,int beta) {
         if (depth == 0 || currentBoard.noMovesAvailable(player))
         {
