@@ -10,7 +10,6 @@ import java.awt.Point;
  * @version 1.0
  */
 public class Directions {
-
   /**
    * Gets the requested direction vector
    * @param compassPoint Direction whose vector we want to retrieve

@@ -4,8 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75c2ac56-3436-46cb-b15f-785f13ee56b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="75c2ac56-3436-46cb-b15f-785f13ee56b2" name="Changes" comment="Added documentation to HamiltonHotz">
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrjaffesclass/othello/Directions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mrjaffesclass/othello/Directions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mrjaffesclass/othello/Othello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mrjaffesclass/othello/Othello.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Directions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Directions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/MoritaWebb.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/MoritaWebb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Othello.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mrjaffesclass/othello/Othello.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +45,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/jacob/Documents/GitHub/othello-Jacob-Alex",
     "node.js.detected.package.eslint": "true",
@@ -45,6 +55,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Othello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mrjaffesclass.othello.Othello" />
+      <module name="othello" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mrjaffesclass.othello.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Othello" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,11 +83,42 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673390035394</updated>
-      <workItem from="1673390036819" duration="1377000" />
+      <workItem from="1673390036819" duration="1715000" />
+      <workItem from="1673640508242" duration="2565000" />
     </task>
+    <task id="LOCAL-00001" summary="Added documentation to HamiltonHotz">
+      <created>1673642866733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673642866733</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added documentation to HamiltonHotz">
+      <created>1673649142643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673649142643</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added documentation to HamiltonHotz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added documentation to HamiltonHotz" />
   </component>
 </project>

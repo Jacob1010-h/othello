@@ -17,7 +17,7 @@ public class Othello {
    */
   public static void main(String[] args) {
     Controller c = new Controller( 
-      new MoritaWebb(Constants.BLACK),
+      new HamiltonHotz(Constants.BLACK),
       new HamiltonHotz(Constants.WHITE)
     );
     c.displayMatchup();
